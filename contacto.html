@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- fuente de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- logos de font awesome -->
+     <script src="https://kit.fontawesome.com/cd795578df.js" crossorigin="anonymous"></script>
+    <title>Contacto</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="./index.html"><img src="./img/svg/dota.png" alt="logo"> <span>Dota Store</span></a>
+
+            <ul>
+                <li><a href="./index.html#ofertas" >Ofertas</a></li>
+                <li><a href="./index.html#destacados" >Destacados</a></li>
+                <li><a href="./index.html#productos">Productos</a></li>
+                <li><a href="./contacto.html" >Contacto</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="contacto">
+            <form action="https://formspree.io/f/xeorpkwz" method="POST">
+                <h2>Contacta con nosotros</h2>
+
+                <label>
+                    Nombre:
+                    <input type="text" name="name" placeholder="Tu nombre" required>
+                </label>
+
+                <label>
+                    Email:
+                    <input type="email" name="email" placeholder="Tu correo" required>
+                </label>
+
+                <label>
+                    Mensaje:
+                    <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>
+                </label>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Dota Store. Todos los derechos reservados.</p>
+        <p>Síguenos en:
+            <a href="#" target="_blank">Facebook</a> |
+            <a href="#" target="_blank">Twitter</a> |
+            <a href="#" target="_blank">Instagram</a>
+        </p>
+    </div>
+</footer>
 </body>
 </html>
