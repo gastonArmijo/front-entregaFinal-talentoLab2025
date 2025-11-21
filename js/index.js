@@ -1,6 +1,9 @@
 import { carousel, renderProductos} from "./carusel.js";
 import { productosArcanas, productosInmortales, productosTesoros } from "./productos.js";
 
+import { agregarAlCarrito } from "./funcionesCarrito.js";
+import { obtenerCarrito } from "./storage.js";
+import { actualizarContador } from "./ui.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     renderProductos(productosArcanas, "#contenedor-arcanas")
@@ -11,4 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     carousel("#contenedor-arcanas", ".prev-arcanas", ".next-arcanas");
     carousel("#contenedor-inmortales", ".prev-inmortales", ".next-inmortales");
     carousel("#contenedor-tesoros", ".prev-tesoros", ".next-tesoros");
+
+    const carrito = obtenerCarrito();
+    actualizarContador(carrito);
+
 })

@@ -1,3 +1,5 @@
+import { agregarAlCarrito } from "./funcionesCarrito.js";
+
 export const carousel = (carouselSelector, prevSelector, nextSelector, step = 220, visible = 4) => {
     const carousel = document.querySelector(carouselSelector);
     const prev = document.querySelector(prevSelector);
@@ -81,6 +83,10 @@ export const renderProductos = (productos, contenedorSelector) => {
         const boton = document.createElement("button");
         boton.classList.add("btn-carrito");
         boton.textContent = "Agregar al carrito";
+
+        boton.addEventListener("click", () => {
+            agregarAlCarrito(p);
+        })
 
         tarjeta.appendChild(img);
         tarjeta.appendChild(titulo);
