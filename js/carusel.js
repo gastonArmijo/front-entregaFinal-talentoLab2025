@@ -71,7 +71,7 @@ export const renderProductos = (productos, contenedorSelector) => {
         tarjeta.classList.add("card");
 
         const img = document.createElement("img");
-        img.src = `/${p.img}`;
+        img.src = `./${p.img}`;
         img.alt = p.nombre;
 
         const titulo = document.createElement("p");
