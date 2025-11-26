@@ -1,6 +1,7 @@
 import { obtenerCarrito } from "./storage.js";
 import { eliminarProducto, vaciarCarrito } from "./funcionesCarrito.js";
 import { actualizarContador } from "./ui.js";
+import { menuHamburguesa } from "./menu.js";
 
 const renderizarCarrito = () => {
     const carrito = obtenerCarrito();
@@ -66,3 +67,5 @@ const renderizarCarrito = () => {
 };
 
 document.addEventListener("DOMContentLoaded", renderizarCarrito);
+
+menuHamburguesa();

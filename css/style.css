@@ -26,6 +26,13 @@ nav{
     height: 5rem;
 }
 
+
+nav #menu-hamburguesa {
+    background-color: #171A21;
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 nav a{
     display: flex;
     gap: 0.5rem;
@@ -43,7 +50,7 @@ nav a span {
     color: #C49A3E;
 }
 
-nav ul {
+nav #links-menu-hamburguesa {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -346,4 +353,46 @@ button:hover {
     align-items: center;
     gap: 5rem;
     
+}
+
+@media (max-width: 768px) {
+    nav #menu-hamburguesa {
+        display: block;
+    }
+
+    nav #links-menu-hamburguesa {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 90%;
+        background-color: #171A21;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        clip-path: circle(0px at 90% -10%);
+        pointer-events: none;
+        z-index: 5;
+    }
+
+    nav #links-menu-hamburguesa.active {
+        clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    nav #links-menu-hamburguesa li {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+
+    nav #links-menu-hamburguesa.active li{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    nav #links-menu-hamburguesa li:nth-child(1) {transition-delay: 0.1s;}
+    nav #links-menu-hamburguesa li:nth-child(2) {transition-delay: 0.2s;}
+    nav #links-menu-hamburguesa li:nth-child(3) {transition-delay: 0.3s;}
+    nav #links-menu-hamburguesa li:nth-child(4) {transition-delay: 0.4s;}
+    nav #links-menu-hamburguesa li:nth-child(5) {transition-delay: 0.5s;}
 }
