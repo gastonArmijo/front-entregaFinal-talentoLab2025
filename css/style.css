@@ -38,7 +38,7 @@ nav a{
     gap: 0.5rem;
     align-items: center;
     text-decoration: none;
-    margin-left: 2rem;
+    
 }
 nav a img {
     height: 3rem;
@@ -120,6 +120,8 @@ main {
 .seccion-productos h2 {
     text-align: center;
     margin: 3rem;
+    font-size: 2rem;
+    font-family: "Cinzel", serif;
 }
 
 .seccion-productos .carousel-contenedor {
@@ -129,7 +131,7 @@ main {
   
   position: relative;
   width: 100%; 
-  max-width: 1200px;             
+  max-width: 1000px;             
   margin: 0 auto;          
   
 }
@@ -230,14 +232,14 @@ main {
     cursor: pointer;
     transition: color 0.3s ease;
     z-index: 10;
-    left: -70px;
+    left: 0;
    
 }
 
 .carousel-contenedor .next-arcanas,
 .carousel-contenedor .next-inmortales,
 .carousel-contenedor .next-tesoros {
-  right: -70px;
+  right: 0;
 }
 
 
@@ -355,6 +357,53 @@ button:hover {
     
 }
 
+
+/*---------reseñas-----------------*/
+
+#contenedor-resenas {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card-resena {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-left: 8px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 300px;
+}
+
+.card-resena:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.card-resena .nombre-usuario {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-resena .comentario {
+    margin: 0.5rem 0 1rem;
+    line-height: 1.5;
+    color: #d5d5d5;
+}
+
+.card-resena .fecha {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+
 @media (max-width: 768px) {
     nav #menu-hamburguesa {
         display: block;
@@ -362,9 +411,9 @@ button:hover {
 
     nav #links-menu-hamburguesa {
         position: fixed;
-        top: 60px;
+        top: 77px;
         left: 0;
-        width: 90%;
+        width: 100%;
         background-color: #171A21;
         flex-direction: column;
         align-items: center;

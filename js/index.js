@@ -2,6 +2,8 @@ import { carousel, renderProductos} from "./carusel.js";
 import { productosArcanas, productosInmortales, productosTesoros } from "./productos.js";
 import { menuHamburguesa } from "./menu.js";
 
+import { renderResenas } from "./resenas.js";
+
 import { agregarAlCarrito } from "./funcionesCarrito.js";
 import { obtenerCarrito } from "./storage.js";
 import { actualizarContador } from "./ui.js";
@@ -19,5 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const carrito = obtenerCarrito();
     actualizarContador(carrito);
+    renderResenas();
 
 })

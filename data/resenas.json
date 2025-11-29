@@ -1,0 +1,75 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "user": "D4rkPlayer",
+      "review": "El producto superó por completo mis expectativas. La calidad es excelente, el diseño está muy bien logrado y se nota que está hecho para durar. El envío fue rápido y llegó perfectamente empaquetado, sin ningún daño. Definitivamente lo volvería a comprar.",
+      "date": "2025-09-12",
+      "color": "#FF6B6B"
+    },
+    {
+      "id": 2,
+      "user": "M4xPro",
+      "review": "Muy buena experiencia de compra. El artículo se ve mejor en persona y funciona de maravilla. Lo estuve usando varios días y responde de forma impecable. Una de las mejores compras que hice este año.",
+      "date": "2025-10-01",
+      "color": "#4ECDC4"
+    },
+    {
+      "id": 3,
+      "user": "xX_ShadowBlade_Xx",
+      "review": "Excelente calidad y un nivel de detalle impresionante. El empaquetado fue muy seguro y el producto llegó antes de lo esperado. Realmente valió la pena.",
+      "date": "2025-08-19",
+      "color": "#5567FF"
+    },
+    {
+      "id": 4,
+      "user": "GhostRider",
+      "review": "Me encantó. Tenía dudas antes de comprarlo pero la verdad es que funciona perfecto y se ve increíble. La construcción es sólida y se nota que está hecho con buenos materiales.",
+      "date": "2025-11-04",
+      "color": "#FFA62B"
+    },
+    {
+      "id": 5,
+      "user": "NeonStrike",
+      "review": "Producto muy bien logrado. Se siente resistente, funciona fluido y el diseño está hermoso. El envío llegó en tiempo y forma. Recomendadísimo.",
+      "date": "2025-10-28",
+      "color": "#9D4EDD"
+    },
+    {
+      "id": 6,
+      "user": "ZeroByte",
+      "review": "Muy conforme con el producto. Lo usé varias veces y nunca falló. Además llegó con una presentación impecable. Definitivamente lo recomiendo.",
+      "date": "2025-09-30",
+      "color": "#1DD3B0"
+    },
+    {
+      "id": 7,
+      "user": "NightHunter",
+      "review": "Excelente compra. Me sorprendió lo bien construido que está y lo confiable que resulta. Venía muy bien protegido y llegó antes del plazo estimado.",
+      "date": "2025-11-10",
+      "color": "#FF4F81"
+    },
+    {
+      "id": 8,
+      "user": "CyberWolf",
+      "review": "Todo impecable. El artículo tiene una calidad superior a lo que esperaba y funciona de manera perfecta. Lo voy a seguir usando sin dudas.",
+      "date": "2025-07-22",
+      "color": "#00A8E8"
+    },
+    {
+      "id": 9,
+      "user": "ShadowCore",
+      "review": "Gran producto por el precio. No solo cumple lo que promete, sino que lo hace muy bien. Lo probé intensivamente y funciona sin fallas.",
+      "date": "2025-09-05",
+      "color": "#FF9F1C"
+    },
+    {
+      "id": 10,
+      "user": "ReaperZone",
+      "review": "Muy buena experiencia. El rendimiento del producto es excelente y la calidad se nota desde el primer momento. Llegó perfecto y muy rápido.",
+      "date": "2025-10-15",
+      "color": "#6A4C93"
+    }
+  ]
+}
+
