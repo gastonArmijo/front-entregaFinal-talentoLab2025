@@ -7,11 +7,22 @@ export const carousel = (carouselSelector, prevSelector, nextSelector, step = 22
 
     if (!carousel || !prev || !next) return;
 
-    // ancho de cada tarjeta (según tu CSS)
-    const cardWidth = step; 
+    //ver una tarjeta en pantallas chicas
+    if (window.innerWidth < 768) {
+        visible = 1;
+    } else {
+        visible = visible ?? 4;
+    }
+
+    document.documentElement.style.setProperty("--visible", visible);
+
     const tarjetas = Array.from(carousel.querySelectorAll(".card"));
     const total = tarjetas.length;
     if (total === 0) return;
+
+    const estilo = window.getComputedStyle(carousel);
+    const gap = parseInt(estilo.columnGap || estilo.gap || 0);
+    const cardWidth = tarjetas[0].offsetWidth + gap;
 
     let index = 0;
     let transitioning = false;
@@ -26,7 +37,7 @@ export const carousel = (carouselSelector, prevSelector, nextSelector, step = 22
         transitioning = true;
 
         index++;
-        if (index > total - visible) index = 0; // reinicia al inicio
+        if (index > total - visible) index = 0; 
 
         moverCarousel();
 
@@ -38,7 +49,7 @@ export const carousel = (carouselSelector, prevSelector, nextSelector, step = 22
         transitioning = true;
 
         index--;
-        if (index < 0) index = total - visible; // vuelve al final
+        if (index < 0) index = total - visible; 
 
         moverCarousel();
 
@@ -48,13 +59,25 @@ export const carousel = (carouselSelector, prevSelector, nextSelector, step = 22
     next.addEventListener("click", avanzar);
     prev.addEventListener("click", retroceder);
 
-    // Desplazamiento con scroll del mouse
+    //evento de scroll con mouse
     const viewport = carousel.parentElement;
     viewport.addEventListener("wheel", (e) => {
         e.preventDefault();
         if (e.deltaY > 0 || e.deltaX > 0) avanzar();
         else retroceder();
     }, { passive: false });
+
+    const recalcularVisible = () => {
+        const nuevoVisible = window.innerWidth <768 ? 1 : 4;
+        if (nuevoVisible !== visible) {
+            visible = nuevoVisible;
+            document.documentElement.style.setProperty("--visible", visible);
+
+            index = 0;
+            moverCarousel(true);
+        }
+    };
+    window.addEventListener ("resize",recalcularVisible);
 };
 
     

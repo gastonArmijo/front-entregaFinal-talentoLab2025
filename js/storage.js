@@ -13,7 +13,7 @@ export const obtenerCarrito = () => {
         localStorage.removeItem(KEY);
         return [];
     }
-    //return JSON.parse(localStorage.getItem(KEY) || []);
+    
 };
 
 export const vaciarCarritoStorage = () => {
