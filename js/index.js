@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             renderProductos(data.productosInmortales, "#contenedor-inmortales");
             renderProductos(data.productosTesoros, "#contenedor-tesoros");
 
+            //inicializar caruseles
             carousel("#contenedor-arcanas", ".prev-arcanas", ".next-arcanas");
             carousel("#contenedor-inmortales", ".prev-inmortales", ".next-inmortales");
             carousel("#contenedor-tesoros", ".prev-tesoros", ".next-tesoros");
